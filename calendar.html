@@ -156,7 +156,7 @@
 
         function updateMainButton() {
             if (selectedDates.size > 0) {
-                tg.MainButton.text = `총 ${selectedDates.size}일 휴가 신청하기`;
+                tg.MainButton.setText(`총 ${selectedDates.size}일 휴가 신청하기`);
                 tg.MainButton.show();
             } else {
                 tg.MainButton.hide();
