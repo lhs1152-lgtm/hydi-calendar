@@ -130,11 +130,6 @@
                 }
 
                 el.onclick = () => {
-                    if (month !== 5) { // 5는 6월 (0-indexed)
-                        tg.showAlert("여름 휴가는 6월에만 선택 및 접수할 수 있습니다.");
-                        return;
-                    }
-                    
                     if (selectedDates.has(dateStr)) {
                         selectedDates.delete(dateStr);
                         el.classList.remove('selected');
