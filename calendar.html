@@ -68,7 +68,7 @@
 </head>
 <body>
 
-    <h2>🌴 휴가 신청 달력</h2>
+    <h2>🏖️ 여름 휴가 신청 달력</h2>
     <div class="subtitle">원하는 휴가 날짜를 터치하세요. (다중 선택 가능)</div>
 
     <div class="month-header">
@@ -130,6 +130,11 @@
                 }
 
                 el.onclick = () => {
+                    if (month !== 5) { // 5는 6월 (0-indexed)
+                        tg.showAlert("여름 휴가는 6월에만 선택 및 접수할 수 있습니다.");
+                        return;
+                    }
+                    
                     if (selectedDates.has(dateStr)) {
                         selectedDates.delete(dateStr);
                         el.classList.remove('selected');
